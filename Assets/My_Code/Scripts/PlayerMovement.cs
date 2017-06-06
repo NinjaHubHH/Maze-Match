@@ -30,10 +30,8 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(-Vector2.up * speed);
+            transform.Translate(-Vector2.up * speed); ,.  
         }
-
-
 
 
         //float move = Input.GetAxis("Horizontal");
