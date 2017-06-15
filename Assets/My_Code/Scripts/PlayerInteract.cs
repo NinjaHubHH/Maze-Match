@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour {
 
     public GameObject currentInteractableObj = null;
+    public Sprite spriteSword;
+    GameObject weapon;
+    GameObject player;
 
     	// Use this for initialization
 	void Start () {
@@ -17,7 +20,6 @@ public class PlayerInteract : MonoBehaviour {
         //Function if you press button e to pick up a weapon/object
         if (Input.GetButtonDown("Interact") && currentInteractableObj)
         {
-            currentInteractableObj.SendMessage("DoInteraction");
         }
 	}
 
@@ -27,6 +29,8 @@ public class PlayerInteract : MonoBehaviour {
         {
             Debug.Log(other.name);
             currentInteractableObj = other.gameObject;
+            Destroy(other.gameObject);
+            gameObject.GetComponent<SpriteRenderer>().sprite = spriteSword;
         }
     }
 

@@ -1761,6 +1761,7 @@ GameObject:
   - component: {fileID: 507963293}
   - component: {fileID: 507963295}
   - component: {fileID: 507963296}
+  - component: {fileID: 507963297}
   m_Layer: 0
   m_Name: sword
   m_TagString: interactableO
@@ -1841,6 +1842,26 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 6.760001, y: 6.73}
+--- !u!50 &507963297
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507963292}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &532552244
 GameObject:
   m_ObjectHideFlags: 0
@@ -6370,6 +6391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInteractableObj: {fileID: 0}
+  spriteSword: {fileID: 21300000, guid: 55710b34314abe6409939338cb44c805, type: 3}
 --- !u!1 &1881818619
 GameObject:
   m_ObjectHideFlags: 0
@@ -6955,7 +6977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -124.7, y: -11.4}
+  m_AnchoredPosition: {x: -135.5, y: -11.4}
   m_SizeDelta: {x: 240.1, y: 52.800003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944612387
