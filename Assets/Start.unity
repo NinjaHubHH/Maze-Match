@@ -6338,7 +6338,7 @@ GameObject:
   - component: {fileID: 1869757488}
   - component: {fileID: 1869757489}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6453,6 +6453,16 @@ MonoBehaviour:
   spriteSword: {fileID: 21300000, guid: 55710b34314abe6409939338cb44c805, type: 3}
   startingHealth: 10
   currentHealth: 0
+  HeartSprites:
+  - {fileID: 21300014, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  - {fileID: 21300012, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  - {fileID: 21300010, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  - {fileID: 21300008, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  - {fileID: 21300006, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  - {fileID: 21300004, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  - {fileID: 21300002, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  - {fileID: 21300000, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
+  HeartUI: {fileID: 1972787142}
 --- !u!1 &1881818619
 GameObject:
   m_ObjectHideFlags: 0
@@ -7239,7 +7249,6 @@ GameObject:
   - component: {fileID: 1983955300}
   - component: {fileID: 1983955299}
   - component: {fileID: 1983955298}
-  - component: {fileID: 1983955303}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7315,27 +7324,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1983955303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1983955297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab2419d73198286428e4926462fc4815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeartSprites:
-  - {fileID: 21300014, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300012, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300010, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300008, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300006, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300004, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300002, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300002, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  HeartUI: {fileID: 1972787142}
 --- !u!1 &2009924524
 GameObject:
   m_ObjectHideFlags: 0
@@ -7978,6 +7966,7 @@ GameObject:
   - component: {fileID: 2142794976}
   - component: {fileID: 2142794975}
   - component: {fileID: 2142794974}
+  - component: {fileID: 2142794977}
   m_Layer: 0
   m_Name: Death
   m_TagString: Untagged
@@ -7996,9 +7985,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03265381, y: 0.0261261}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5877934, y: 1.7576114}
 --- !u!212 &2142794975
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8047,3 +8036,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142794977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142794973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4d95005d940814683bae47dfdf99ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 1
+  player: {fileID: 1869757483}

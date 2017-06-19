@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -12,8 +13,13 @@ public class Player : MonoBehaviour {
     public int startingHealth = 6;
     public int currentHealth;
 
-    	// Use this for initialization
-	void Start () {
+    public Sprite[] HeartSprites;
+    public Image HeartUI;
+
+    bool isDead;
+
+    // Called in the beginning
+    void Awake () {
 
         currentHealth = startingHealth;
 	}
@@ -26,11 +32,6 @@ public class Player : MonoBehaviour {
         {
         }
 
-        //Player Death
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
 
 	}
 
@@ -43,6 +44,20 @@ public class Player : MonoBehaviour {
             Destroy(other.gameObject);
             gameObject.GetComponent<SpriteRenderer>().sprite = spriteSword;
         }
+    }
+
+    public void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+
+        HeartUI.sprite = HeartSprites[currentHealth];
+
+        //Player Death
+        if (currentHealth <= 0 && !isDead)
+        {
+            Die();
+        }
+
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -58,6 +73,7 @@ public class Player : MonoBehaviour {
 
     void Die()
     {
+        isDead = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
