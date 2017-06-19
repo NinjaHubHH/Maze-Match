@@ -22,7 +22,8 @@ public class Player : MonoBehaviour {
     void Awake () {
 
         currentHealth = startingHealth;
-	}
+        HeartUI.sprite = HeartSprites[6];
+    }
 	
 	// Update is called once per frame
 	void Update () {

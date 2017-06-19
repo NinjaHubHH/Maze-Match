@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 
 	void Awake () {
 
-        player = GameObject.FindGameObjectWithTag("Character");
+      //  player = GameObject.FindGameObjectWithTag("Character");
         playerHealth = player.GetComponent<Player>();
 	}
 

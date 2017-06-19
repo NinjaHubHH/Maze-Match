@@ -2,37 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class Player2Movement : MonoBehaviour
+{
 
     public float speed = 0.1f;
     private Rigidbody2D player;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         player = GetComponent<Rigidbody2D>();
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+    }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector2.right * speed);
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(-Vector2.right * speed);
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector2.up * speed);
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(-Vector2.up * speed);
         }
-
 
         //float move = Input.GetAxis("Horizontal");
 
