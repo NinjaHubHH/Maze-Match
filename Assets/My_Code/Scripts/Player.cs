@@ -31,6 +31,7 @@ public class Player : MonoBehaviour {
         //Function if you press button e to pick up a weapon/object
         if (Input.GetButtonDown("Interact") && currentInteractableObj)
         {
+            //not used yet
         }
 
 
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        //if an Object with the Tag "interactableO" is triggered then destroy this object(to hide it) and change the sprite
         if (other.CompareTag("interactableO"))
         {
             Debug.Log(other.name);
@@ -47,10 +49,12 @@ public class Player : MonoBehaviour {
         }
     }
 
+    //Enemy calls this function when he damaged the player
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
 
+        Debug.Log(currentHealth);
         HeartUI.sprite = HeartSprites[currentHealth];
 
         //Player Death
@@ -72,6 +76,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    //if currenthealth = 0 the player dies 
     void Die()
     {
         isDead = true;
