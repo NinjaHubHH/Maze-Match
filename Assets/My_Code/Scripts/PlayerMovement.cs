@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public float speed = 0.1f;
+    public float speed ;
     private Rigidbody2D player;
 
 	// Use this for initialization
@@ -16,29 +16,11 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(Vector2.right * speed);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(-Vector2.right * speed);
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(Vector2.up * speed);
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(-Vector2.up * speed);
-        }
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
+        float moveVertical = Input.GetAxis("Vertical");
 
-        //float move = Input.GetAxis("Horizontal");
-
-        //player.velocity = new Vector2(move * speed, player.velocity.y);
-
-        // transform.Translate(speed * Input.GetAxis("Horizontal") * Time.deltaTime,speed * Input.GetAxis("Vertical") * Time.deltaTime, 0f);
+        player.velocity = new Vector2(moveHorizontal * speed * 2, moveVertical * speed * 2);
 
     }
 }
