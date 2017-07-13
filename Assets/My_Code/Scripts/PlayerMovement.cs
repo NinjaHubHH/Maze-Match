@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 
         float moveVertical = Input.GetAxis("Vertical");
 
-        player.velocity = new Vector2(moveHorizontal * speed * 2, moveVertical * speed * 2);
+        player.velocity = new Vector2(moveHorizontal , moveVertical) * speed * 2;
 
     }
 }
