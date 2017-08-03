@@ -17,34 +17,22 @@ Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_Data\Managed
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.121 seconds
+- Completed reload, in  0.125 seconds
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_Data\Managed\System.dll (this message is harmless)
 desktop: 1680x1050 60Hz; virtual: 3600x1080 at -1680,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.831638 ms
+UnloadTime: 3.820881 ms
 NullReferenceException: Object reference not set to an instance of an object
   at Enemy.Awake () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-Screen Center: x: 600y: 800
+Screen Center: x: 720y: 1280
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Player.Awake () [0x00000] in <filename unknown>:0 
-UnityEngine.GameObject:SetActive(Boolean)
-UnityEngine.Networking.NetworkServer:SpawnObjects()
-UnityEngine.Networking.NetworkManager:StartServer(MatchInfo, ConnectionConfig, Int32)
-UnityEngine.Networking.NetworkManager:StartServer(MatchInfo)
-UnityEngine.Networking.NetworkManager:StartServer()
-UnityEngine.Networking.NetworkManager:StartHost()
-UnityEngine.Networking.NetworkManagerHUD:OnGUI()
- 
-(Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
   at Player.Awake () [0x00000] in <filename unknown>:0 
@@ -71,60 +59,11 @@ UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
  
 (Filename:  Line: -1)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at Player.Awake () [0x00000] in <filename unknown>:0 
-UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
-UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
-UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
-UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayerInternal(NetworkConnection, Int16)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayer(NetworkConnection, Int16)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayerMessageInternal(NetworkMessage)
-UnityEngine.Networking.NetworkConnection:HandleReader(NetworkReader, Int32, Int32)
-UnityEngine.Networking.NetworkConnection:HandleBytes(Byte[], Int32, Int32)
-UnityEngine.Networking.NetworkConnection:TransportRecieve(Byte[], Int32, Int32)
-UnityEngine.Networking.NetworkServer:OnData(NetworkConnection, Int32, Int32)
-UnityEngine.Networking.ServerSimpleWrapper:OnData(NetworkConnection, Int32, Int32)
-UnityEngine.Networking.NetworkServerSimple:HandleData(Int32, Int32, Int32, Byte)
-UnityEngine.Networking.NetworkServerSimple:Update()
-UnityEngine.Networking.NetworkServer:InternalUpdate()
-UnityEngine.Networking.NetworkServer:Update()
-UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
+Scene 'Menu' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
  
-(Filename:  Line: -1)
-
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:49899}
-ServerDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Player.Awake () [0x00000] in <filename unknown>:0 
-UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
-UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
-UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
-UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayerInternal(NetworkConnection, Int16)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayer(NetworkConnection, Int16)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayerMessageInternal(NetworkMessage)
-UnityEngine.Networking.NetworkConnection:HandleReader(NetworkReader, Int32, Int32)
-UnityEngine.Networking.NetworkConnection:HandleBytes(Byte[], Int32, Int32)
-UnityEngine.Networking.NetworkConnection:TransportRecieve(Byte[], Int32, Int32)
-UnityEngine.Networking.NetworkServer:OnData(NetworkConnection, Int32, Int32)
-UnityEngine.Networking.ServerSimpleWrapper:OnData(NetworkConnection, Int32, Int32)
-UnityEngine.Networking.NetworkServerSimple:HandleData(Int32, Int32, Int32, Byte)
-UnityEngine.Networking.NetworkServerSimple:Update()
-UnityEngine.Networking.NetworkServer:InternalUpdate()
-UnityEngine.Networking.NetworkServer:Update()
-UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
- 
-(Filename:  Line: -1)
-
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:55016}
-ServerDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: 128)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3284 -> priority: 1 
-  Thread -> id: 1d58 -> priority: 1 
+  Thread -> id: 1c68 -> priority: 1 
+  Thread -> id: ed4 -> priority: 1 
