@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour {
 
+    public CanvasGroup canvasGroup;
+
+    void Start()
+    {
+        HideCanvasImage();
+    }
+
     public void StartGameBtn(string gameLevel)
     {
         SceneManager.LoadScene(gameLevel);
@@ -15,4 +22,19 @@ public class ButtonManager : MonoBehaviour {
         SceneManager.LoadScene(gameLevel);
     }
 
+    public void HowToPlayGameBtn(string gameLevel)
+    {
+        canvasGroup.alpha = 1;
+        canvasGroup.blocksRaycasts = true;
+
+    }
+
+
+
+    //hide the hoToPlay Image and forbid input events
+    public void HideCanvasImage()
+    {
+        canvasGroup.alpha = 0;
+        canvasGroup.blocksRaycasts = false;
+    }
 }
