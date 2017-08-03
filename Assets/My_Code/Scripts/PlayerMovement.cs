@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : NetworkBehaviour {
 
     public float speed ;
     private Rigidbody2D player;
@@ -15,6 +16,11 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        if (!isLocalPlayer)
+        {
+            return;
+        }
 
         float moveHorizontal = Input.GetAxis("Horizontal");
 

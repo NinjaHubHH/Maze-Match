@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class Health : MonoBehaviour {
+public class Health : NetworkBehaviour {
 
     GameObject player;
     bool playerInRange;
 
     public int startingHealth = 6;
+    [SyncVar]
     public int currentHealth;
 
     public int attackDamage = 1;
@@ -49,8 +51,14 @@ public class Health : MonoBehaviour {
         }
     }
 
+    //The function TakeDamage will only run on the Server
     public void TakeDamage(int amount)
     {
+        if (!isServer)
+        {
+            return;
+        }
+
         currentHealth -= amount;
 
         Debug.Log(currentHealth);
