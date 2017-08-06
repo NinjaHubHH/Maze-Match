@@ -1329,8 +1329,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "After build & Run\n\nClick Start \nClick on the LAN Host for being the
-    first Player \n\nUse WASD for the Player Movement\n\nTo join the Game in another
+  m_Text: "After Build & Run\n\nClick Start \nClick on the LAN Host for being the
+    first Player \n\nUse WASD for the Player Movement\n\nTo join the Game with another
     Player (standalone or in the Game View in Unity) click on LAN Client.\n\nHave
     fun !"
 --- !u!222 &2012036693
