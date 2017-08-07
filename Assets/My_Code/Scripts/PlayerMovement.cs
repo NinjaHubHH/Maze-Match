@@ -11,22 +11,25 @@ public class PlayerMovement : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        player = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 
         if (!isLocalPlayer)
         {
             return;
         }
 
+        player = GetComponent<Rigidbody2D>();
+
         float moveHorizontal = Input.GetAxis("Horizontal");
 
         float moveVertical = Input.GetAxis("Vertical");
 
         player.velocity = new Vector2(moveHorizontal , moveVertical) * speed * 2;
+
+
 
     }
 }

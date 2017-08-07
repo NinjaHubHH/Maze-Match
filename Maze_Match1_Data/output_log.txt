@@ -17,11 +17,118 @@ Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match1_Data\Manage
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.126 seconds
+- Completed reload, in  0.016 seconds
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match1_Data\Managed\System.dll (this message is harmless)
 desktop: 1680x1050 60Hz; virtual: 3600x1080 at -1680,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.618070 ms
+UnloadTime: 32.131184 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.663655 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 467.
+Total: 20.693880 ms (FindLiveObjects: 0.035594 ms CreateObjectMapping: 0.011523 ms MarkObjects: 1.270384 ms  DeleteObjects: 19.376377 ms)
+
+Screen Center: x: 720y: 1280
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerInternal(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayer(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerMessageInternal(NetworkMessage)
+UnityEngine.Networking.NetworkConnection:InvokeHandler(Int16, NetworkReader, Int32)
+UnityEngine.Networking.NetworkServer:InvokeHandlerOnServer(ULocalConnectionToServer, Int16, MessageBase, Int32)
+UnityEngine.Networking.ULocalConnectionToServer:Send(Int16, MessageBase)
+UnityEngine.Networking.ClientScene:AddPlayer(NetworkConnection, Int16, MessageBase)
+UnityEngine.Networking.ClientScene:AddPlayer(NetworkConnection, Int16)
+UnityEngine.Networking.ClientScene:AddPlayer(Int16)
+UnityEngine.Networking.NetworkManager:OnClientConnect(NetworkConnection)
+UnityEngine.Networking.NetworkManager:OnClientConnectInternal(NetworkMessage)
+UnityEngine.Networking.NetworkConnection:InvokeHandler(NetworkMessage)
+UnityEngine.Networking.LocalClient:ProcessInternalMessages()
+UnityEngine.Networking.LocalClient:Update()
+UnityEngine.Networking.NetworkClient:UpdateClients()
+UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerInternal(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayer(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerMessageInternal(NetworkMessage)
+UnityEngine.Networking.NetworkConnection:HandleReader(NetworkReader, Int32, Int32)
+UnityEngine.Networking.NetworkConnection:HandleBytes(Byte[], Int32, Int32)
+UnityEngine.Networking.NetworkConnection:TransportRecieve(Byte[], Int32, Int32)
+UnityEngine.Networking.NetworkServer:OnData(NetworkConnection, Int32, Int32)
+UnityEngine.Networking.ServerSimpleWrapper:OnData(NetworkConnection, Int32, Int32)
+UnityEngine.Networking.NetworkServerSimple:HandleData(Int32, Int32, Int32, Byte)
+UnityEngine.Networking.NetworkServerSimple:Update()
+UnityEngine.Networking.NetworkServer:InternalUpdate()
+UnityEngine.Networking.NetworkServer:Update()
+UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerInternal(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayer(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerMessageInternal(NetworkMessage)
+UnityEngine.Networking.NetworkConnection:InvokeHandler(Int16, NetworkReader, Int32)
+UnityEngine.Networking.NetworkServer:InvokeHandlerOnServer(ULocalConnectionToServer, Int16, MessageBase, Int32)
+UnityEngine.Networking.ULocalConnectionToServer:Send(Int16, MessageBase)
+UnityEngine.Networking.ClientScene:AddPlayer(NetworkConnection, Int16, MessageBase)
+UnityEngine.Networking.ClientScene:AddPlayer(NetworkConnection, Int16)
+UnityEngine.Networking.ClientScene:AddPlayer(Int16)
+UnityEngine.Networking.NetworkManager:OnClientConnect(NetworkConnection)
+UnityEngine.Networking.NetworkManager:OnClientConnectInternal(NetworkMessage)
+UnityEngine.Networking.NetworkConnection:InvokeHandler(NetworkMessage)
+UnityEngine.Networking.LocalClient:ProcessInternalMessages()
+UnityEngine.Networking.LocalClient:Update()
+UnityEngine.Networking.NetworkClient:UpdateClients()
+UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerInternal(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayer(NetworkConnection, Int16)
+UnityEngine.Networking.NetworkManager:OnServerAddPlayerMessageInternal(NetworkMessage)
+UnityEngine.Networking.NetworkConnection:HandleReader(NetworkReader, Int32, Int32)
+UnityEngine.Networking.NetworkConnection:HandleBytes(Byte[], Int32, Int32)
+UnityEngine.Networking.NetworkConnection:TransportRecieve(Byte[], Int32, Int32)
+UnityEngine.Networking.NetworkServer:OnData(NetworkConnection, Int32, Int32)
+UnityEngine.Networking.ServerSimpleWrapper:OnData(NetworkConnection, Int32, Int32)
+UnityEngine.Networking.NetworkServerSimple:HandleData(Int32, Int32, Int32, Byte)
+UnityEngine.Networking.NetworkServerSimple:Update()
+UnityEngine.Networking.NetworkServer:InternalUpdate()
+UnityEngine.Networking.NetworkServer:Update()
+UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
+ 
+(Filename:  Line: -1)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 4fa0 -> priority: 1 
+  Thread -> id: 4058 -> priority: 1 
