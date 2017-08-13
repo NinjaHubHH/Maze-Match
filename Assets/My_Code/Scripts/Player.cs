@@ -18,6 +18,12 @@ public class Player : MonoBehaviour {
 
     bool isDead;
 
+	public RuntimeAnimatorController anim1;
+	public RuntimeAnimatorController anim2;
+
+	//public RuntimeAnimatorController animatorController;
+
+
     // Called in the beginning
     void Awake () {
 
@@ -45,7 +51,10 @@ public class Player : MonoBehaviour {
             Debug.Log(other.name);
             currentInteractableObj = other.gameObject;
             Destroy(other.gameObject);
-            gameObject.GetComponent<SpriteRenderer>().sprite = spriteSword;
+           	gameObject.GetComponent<SpriteRenderer>().sprite = spriteSword;
+
+			gameObject.GetComponent<Animator> ().runtimeAnimatorController = anim2 as RuntimeAnimatorController; 
+
         }
     }
 

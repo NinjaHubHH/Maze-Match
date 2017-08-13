@@ -7,39 +7,45 @@ Direct3D:
     VRAM:     3072 MB
     Driver:   22.21.13.8476
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.106 seconds
-Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze-Match\Maze_Match1_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
-<RI.Hid> Failed to create device file:
- 2 Das System kann die angegebene Datei nicht finden.
-
- 
-(Filename:  Line: 54)
-
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.338608 ms
+UnloadTime: 1.007378 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.201695 ms
+UnloadTime: 4.393641 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 470.
-Total: 0.305766 ms (FindLiveObjects: 0.063754 ms CreateObjectMapping: 0.012053 ms MarkObjects: 0.203950 ms  DeleteObjects: 0.024106 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.275633 ms (FindLiveObjects: 0.042502 ms CreateObjectMapping: 0.016810 ms MarkObjects: 0.195385 ms  DeleteObjects: 0.020299 ms)
 
 Screen Center: x: 720y: 1280
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Awake () [0x00000] in <filename unknown>:0 
+UnityEngine.GameObject:SetActive(Boolean)
+UnityEngine.Networking.NetworkServer:SpawnObjects()
+UnityEngine.Networking.NetworkManager:StartServer(MatchInfo, ConnectionConfig, Int32)
+UnityEngine.Networking.NetworkManager:StartServer(MatchInfo)
+UnityEngine.Networking.NetworkManager:StartServer()
+UnityEngine.Networking.NetworkManager:StartHost()
+UnityEngine.Networking.NetworkManagerHUD:Update()
+ 
+(Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
   at Player.Awake () [0x00000] in <filename unknown>:0 
@@ -66,31 +72,9 @@ UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
  
 (Filename:  Line: -1)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at Player.Awake () [0x00000] in <filename unknown>:0 
-UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
-UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion)
-UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
-UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayerInternal(NetworkConnection, Int16)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayer(NetworkConnection, Int16)
-UnityEngine.Networking.NetworkManager:OnServerAddPlayerMessageInternal(NetworkMessage)
-UnityEngine.Networking.NetworkConnection:HandleReader(NetworkReader, Int32, Int32)
-UnityEngine.Networking.NetworkConnection:HandleBytes(Byte[], Int32, Int32)
-UnityEngine.Networking.NetworkConnection:TransportRecieve(Byte[], Int32, Int32)
-UnityEngine.Networking.NetworkServer:OnData(NetworkConnection, Int32, Int32)
-UnityEngine.Networking.ServerSimpleWrapper:OnData(NetworkConnection, Int32, Int32)
-UnityEngine.Networking.NetworkServerSimple:HandleData(Int32, Int32, Int32, Byte)
-UnityEngine.Networking.NetworkServerSimple:Update()
-UnityEngine.Networking.NetworkServer:InternalUpdate()
-UnityEngine.Networking.NetworkServer:Update()
-UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate()
- 
-(Filename:  Line: -1)
-
-sword(Clone)
+axe_sprite(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: dfc -> priority: 1 
+  Thread -> id: 31f8 -> priority: 1 
