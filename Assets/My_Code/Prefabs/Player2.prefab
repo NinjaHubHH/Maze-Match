@@ -167,8 +167,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
   - {fileID: 21300000, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
   HeartUI: {fileID: 0}
-  anim1: {fileID: 9100000, guid: 8e7ea76cc0fcdfe4bbdef79a805fe97e, type: 2}
-  anim2: {fileID: 9100000, guid: ce7fee9f70ce2ce429b3ad14db52d8f3, type: 2}
+  animWeapon: {fileID: 9100000, guid: ce7fee9f70ce2ce429b3ad14db52d8f3, type: 2}
 --- !u!114 &114891639069669958
 MonoBehaviour:
   m_ObjectHideFlags: 1
