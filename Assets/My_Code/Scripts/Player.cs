@@ -7,14 +7,13 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 
     public GameObject currentInteractableObj = null;
-    public Sprite spriteSword;
+   // public Sprite spriteSword;
     GameObject weapon;
     GameObject player;
     public int startingHealth = 6;
     public int currentHealth;
 
     public Sprite[] HeartSprites;
-    public Image HeartUI;
 
     bool isDead;
 
@@ -28,7 +27,6 @@ public class Player : MonoBehaviour {
     void Awake () {
 
         currentHealth = startingHealth;
-        HeartUI.sprite = HeartSprites[6];
     }
 	
 	// Update is called once per frame
@@ -52,7 +50,6 @@ public class Player : MonoBehaviour {
             currentInteractableObj = other.gameObject;
             Destroy(other.gameObject);
            	
-
 			gameObject.GetComponent<Animator> ().runtimeAnimatorController = animWeapon as RuntimeAnimatorController; 
 
         }
@@ -64,7 +61,7 @@ public class Player : MonoBehaviour {
         currentHealth -= amount;
 
         Debug.Log(currentHealth);
-        HeartUI.sprite = HeartSprites[currentHealth];
+       // HeartUI.sprite = HeartSprites[currentHealth];
 
         //Player Death
         if (currentHealth <= 0 && !isDead)
