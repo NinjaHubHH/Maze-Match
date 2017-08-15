@@ -464,7 +464,7 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     UNet: 1
-  cloudProjectId: a3e6afec-e505-4378-971b-60150f16fa6d
+  cloudProjectId: d8c9600f-6c2c-4f04-89ac-6428ddb16010
   projectName: MazeMatch
-  organizationId: ninja-ruesch
+  organizationId: fabian-2292247
   cloudEnabled: 0

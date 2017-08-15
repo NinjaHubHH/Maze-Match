@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInteractableObj: {fileID: 0}
-  spriteSword: {fileID: 21300000, guid: 55710b34314abe6409939338cb44c805, type: 3}
   startingHealth: 10
   currentHealth: 0
   HeartSprites:
@@ -186,7 +185,6 @@ MonoBehaviour:
   - {fileID: 21300004, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
   - {fileID: 21300002, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
   - {fileID: 21300000, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  HeartUI: {fileID: 0}
   animWeapon: {fileID: 9100000, guid: 0bed476463114b74fb3b8dd087e949f4, type: 2}
 --- !u!212 &212131040389687430
 SpriteRenderer:

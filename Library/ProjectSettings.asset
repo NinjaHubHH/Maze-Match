@@ -462,8 +462,9 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudServicesEnabled:
+    UNet: 1
+  cloudProjectId: d8c9600f-6c2c-4f04-89ac-6428ddb16010
+  projectName: MazeMatch
+  organizationId: fabian-2292247
   cloudEnabled: 0

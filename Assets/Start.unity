@@ -702,9 +702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 1729353488151716, guid: e9e9f848209efc145b257bd57868e733, type: 2}
-  - {fileID: 1941961825216914, guid: 353d598d5e201ef40851f50d8f82cd2f, type: 2}
-  - {fileID: 1537131111885284, guid: 538a08d72acc12244b088a73288a4190, type: 2}
+  - {fileID: 1089590072789026, guid: 0a4a0e36f9a365a458ef73b7f28f0c8f, type: 2}
+  - {fileID: 1089590072789026, guid: 0a4a0e36f9a365a458ef73b7f28f0c8f, type: 2}
+  - {fileID: 1089590072789026, guid: 0a4a0e36f9a365a458ef73b7f28f0c8f, type: 2}
   centerPoint: {x: 359.1, y: 173.4, z: 0}
 --- !u!4 &600526420
 Transform:
