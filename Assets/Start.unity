@@ -1612,7 +1612,7 @@ MonoBehaviour:
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
-  m_MaxDelay: 0.01
+  m_MaxDelay: 0
   m_LogLevel: 2
   m_PlayerPrefab: {fileID: 1743024470142148, guid: 629698760ed08a0428a3cbad18207c8f,
     type: 2}

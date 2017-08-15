@@ -18,6 +18,13 @@ public class PlayerMovement : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+		if (!isLocalPlayer)
+		{
+			return;
+		}
+
+
 		// trigger animations
 		if (Input.GetKey ("s")) {
 			animator.SetBool ("playerDown", true);
@@ -46,10 +53,6 @@ public class PlayerMovement : NetworkBehaviour {
 
 
 
-        if (!isLocalPlayer)
-        {
-            return;
-        }
 
         player = GetComponent<Rigidbody2D>();
 

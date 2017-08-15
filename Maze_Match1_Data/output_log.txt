@@ -17,13 +17,23 @@ Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngi
 Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.018 seconds
+- Completed reload, in  0.044 seconds
 Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.005792 ms
+UnloadTime: 0.994373 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.252494 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 565.
+Total: 0.344462 ms (FindLiveObjects: 0.079930 ms CreateObjectMapping: 0.031084 ms MarkObjects: 0.211244 ms  DeleteObjects: 0.021251 ms)
+
+Screen Center: x: 720y: 1280
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2920 -> priority: 1 
+  Thread -> id: 2468 -> priority: 1 
