@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class Player : MonoBehaviour {
+
+public class Player : NetworkBehaviour {
 
     public GameObject currentInteractableObj = null;
    // public Sprite spriteSword;
@@ -17,8 +19,8 @@ public class Player : MonoBehaviour {
 
     bool isDead;
 
-
 	public RuntimeAnimatorController animWeapon;
+
 
 	//public RuntimeAnimatorController animatorController;
 
@@ -27,7 +29,10 @@ public class Player : MonoBehaviour {
     void Awake () {
 
         currentHealth = startingHealth;
+
+
     }
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,7 +42,7 @@ public class Player : MonoBehaviour {
         {
             //not used yet
         }
-
+			
 
 	}
 

@@ -8,11 +8,12 @@ public class PlayerMovement : NetworkBehaviour {
     public float speed ;
     private Rigidbody2D player;
 	private Animator animator;
+	private ParticleSystem particle; 
 
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> (); 
-
+		particle = GetComponentInChildren<ParticleSystem> ();
 	}
 	
 	// Update is called once per frame
@@ -25,12 +26,14 @@ public class PlayerMovement : NetworkBehaviour {
 		}
 
 
+
 		// trigger animations
 		if (Input.GetKey ("s")) {
 			animator.SetBool ("playerDown", true);
 		} 
 		else { animator.SetBool ("playerDown", false);
 		}
+
 		if (Input.GetKey ("w")) {
 			animator.SetBool ("playerUp", true);
 		} 
@@ -62,6 +65,13 @@ public class PlayerMovement : NetworkBehaviour {
 
         player.velocity = new Vector2(moveHorizontal , moveVertical) * speed * 2;
 
+		if (player.velocity.magnitude > 1.4f) {
+		
+			particle.enableEmission = true; 
+		} 
+		else {
+			particle.enableEmission = false;
+		}
 
 
     }
