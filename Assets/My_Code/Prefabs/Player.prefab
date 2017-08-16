@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4275199684153526}
   - component: {fileID: 198676397672340594}
   - component: {fileID: 199884768243808392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WalkParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 114701274486050692}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656466963260594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.099, z: 0}
+  m_LocalPosition: {x: 0.001, y: -0.077, z: 0}
   m_LocalScale: {x: 1.5211662, y: 1.5211662, z: 1.5211662}
   m_Children: []
   m_Father: {fileID: 4886138671272374}
@@ -292,12 +292,12 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -674078718
+  randomSeed: -149921570
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
-      scalar: 0.6
+      scalar: 0.15
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -315,7 +315,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 2
           time: 0
-          value: 0.6666666
+          value: 0.79999995
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -717,7 +717,7 @@ ParticleSystem:
     enabled: 1
     serializedVersion: 3
     rateOverTime:
-      scalar: 50
+      scalar: 15
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2839,7 +2839,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 369655017
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
