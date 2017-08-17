@@ -11,30 +11,11 @@ public class Player : NetworkBehaviour {
     public GameObject currentInteractableObj = null;
     GameObject weapon;
     GameObject player;
-    Player playerHealth;
-    public int startingHealth = 6;
-    public int currentHealth;
-
-    public int attackRate = 1;
-
-    public Sprite[] HeartSprites;
-
-    bool isDead;
 
 	public RuntimeAnimatorController animWeapon;
 
 
 	//public RuntimeAnimatorController animatorController;
-
-
-    // Called in the beginning
-    void Awake () {
-
-        currentHealth = startingHealth;
-
-
-    }
-
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,10 +31,6 @@ public class Player : NetworkBehaviour {
             //not used yet
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Attack();
-        }
 
     }
 
@@ -70,30 +47,6 @@ public class Player : NetworkBehaviour {
 
         }
     }
-    public void Attack()
-    {
-        if (playerHealth.currentHealth > 0)
-        {
-            playerHealth.TakeDamage(attackRate);
-        }
-    }
-
-
-    //Enemy calls this function when he damaged the player
-    public void TakeDamage(int amount)
-    {
-        currentHealth -= amount;
-
-        Debug.Log(currentHealth);
-       // HeartUI.sprite = HeartSprites[currentHealth];
-
-        //Player Death
-        if (currentHealth <= 0 && !isDead)
-        {
-            Die();
-        }
-
-    }
 
     void OnTriggerExit2D(Collider2D other)
     {
@@ -105,12 +58,4 @@ public class Player : NetworkBehaviour {
             }
         }
     }
-
-    //if currenthealth = 0 the player dies 
-    void Die()
-    {
-        isDead = true;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
 }

@@ -24,7 +24,7 @@ public class Health : NetworkBehaviour {
     // Use this for initialization
     void Start () {
         currentHealth = startingHealth;
-        HeartUI.sprite = HeartSprites[6];
+     //   HeartUI.sprite = HeartSprites[6];
     }
 	
 	// Update is called once per frame
@@ -37,7 +37,9 @@ public class Health : NetworkBehaviour {
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == player)
+        Debug.Log("You hit " + other.name);
+
+        if (other.gameObject.tag == "Player")
         {
             playerInRange = true;
             Debug.Log("PlayerHealth" + " :" + currentHealth);
@@ -45,14 +47,15 @@ public class Health : NetworkBehaviour {
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.tag == "Player")
         {
             playerInRange = false;
         }
     }
 
     //The function TakeDamage will only run on the Server
-    public void TakeDamage(int amount)
+    [Command]
+    public void CmdTakeDamage(int amount)
     {
         if (!isServer)
         {
@@ -76,7 +79,7 @@ public class Health : NetworkBehaviour {
     {
         if (currentHealth > 0)
         {
-            TakeDamage(attackDamage);
+            CmdTakeDamage(attackDamage);
         }
     }
     //if currenthealth = 0 the player dies 

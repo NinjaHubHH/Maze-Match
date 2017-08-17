@@ -17,7 +17,18 @@ public class PlayerSetup : NetworkBehaviour {
         {
             AssignRemoteLayer();
         }
+
+        RegisterPlayer();
     }
+
+    //assign an ID for the Player
+    void RegisterPlayer()
+    {
+        string _ID = "Player " + GetComponent<NetworkIdentity>().netId;
+        transform.name = _ID;
+    }
+
+
 
     void AssignRemoteLayer()
     {

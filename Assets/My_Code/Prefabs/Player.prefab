@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 95514800397784816}
   - component: {fileID: 114701274486050692}
   - component: {fileID: 114746821408070102}
+  - component: {fileID: 114148497623457472}
+  - component: {fileID: 58947338783684630}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -100,6 +102,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58947338783684630
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743024470142148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.11061904
 --- !u!61 &61291558552686798
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -131,6 +147,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114148497623457472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743024470142148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a485722e36030419ce72d8c4d49410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 6
+  currentHealth: 0
+  attackDamage: 1
+  HeartSprites: []
 --- !u!114 &114368093454900586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,18 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInteractableObj: {fileID: 0}
-  startingHealth: 10
-  currentHealth: 0
-  attackRate: 1
-  HeartSprites:
-  - {fileID: 21300014, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300012, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300010, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300008, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300006, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300004, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300002, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300000, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
   animWeapon: {fileID: 9100000, guid: 0bed476463114b74fb3b8dd087e949f4, type: 2}
 --- !u!114 &114701274486050692
 MonoBehaviour:
@@ -250,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68d661eb5ebfd34bad5c3d0b3e932d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remoteLayerName: RemotePlayer
+  remoteLayerName: 10
 --- !u!198 &198676397672340594
 ParticleSystem:
   m_ObjectHideFlags: 1

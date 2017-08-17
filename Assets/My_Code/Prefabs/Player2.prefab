@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114646348584938942}
   - component: {fileID: 114891639069669958}
   - component: {fileID: 95622085061293900}
+  - component: {fileID: 58372072047364232}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -67,6 +68,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58372072047364232
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781161712242342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.11061904
 --- !u!61 &61814544637118860
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -154,17 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInteractableObj: {fileID: 0}
-  startingHealth: 10
-  currentHealth: 0
-  HeartSprites:
-  - {fileID: 21300014, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300012, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300010, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300008, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300006, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300004, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300002, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
-  - {fileID: 21300000, guid: e7b40be8f4c965448bcaa0403b7abaf9, type: 3}
   animWeapon: {fileID: 9100000, guid: ce7fee9f70ce2ce429b3ad14db52d8f3, type: 2}
 --- !u!114 &114891639069669958
 MonoBehaviour:

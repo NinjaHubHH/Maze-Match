@@ -26,7 +26,6 @@ public class PlayerMovement : NetworkBehaviour {
 		}
 
 
-
 		// trigger animations
 		if (Input.GetKey ("s")) {
 			animator.SetBool ("playerDown", true);
@@ -56,7 +55,7 @@ public class PlayerMovement : NetworkBehaviour {
 
 
 
-
+        //Player Movement 
         player = GetComponent<Rigidbody2D>();
 
         float moveHorizontal = Input.GetAxis("Horizontal");
