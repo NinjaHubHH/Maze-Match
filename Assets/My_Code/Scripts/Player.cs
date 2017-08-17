@@ -9,11 +9,13 @@ using UnityEngine.Networking;
 public class Player : NetworkBehaviour {
 
     public GameObject currentInteractableObj = null;
-   // public Sprite spriteSword;
     GameObject weapon;
     GameObject player;
+    Player playerHealth;
     public int startingHealth = 6;
     public int currentHealth;
+
+    public int attackRate = 1;
 
     public Sprite[] HeartSprites;
 
@@ -37,14 +39,23 @@ public class Player : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         //Function if you press button e to pick up a weapon/object
         if (Input.GetButtonDown("Interact") && currentInteractableObj)
         {
             //not used yet
         }
-			
 
-	}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Attack();
+        }
+
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -59,6 +70,14 @@ public class Player : NetworkBehaviour {
 
         }
     }
+    public void Attack()
+    {
+        if (playerHealth.currentHealth > 0)
+        {
+            playerHealth.TakeDamage(attackRate);
+        }
+    }
+
 
     //Enemy calls this function when he damaged the player
     public void TakeDamage(int amount)
