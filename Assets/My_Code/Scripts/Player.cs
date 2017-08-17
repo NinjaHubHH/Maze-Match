@@ -13,6 +13,7 @@ public class Player : NetworkBehaviour {
     GameObject player;
 
 	public RuntimeAnimatorController animWeapon;
+	public RuntimeAnimatorController animWeapon2;
 
 
 	//public RuntimeAnimatorController animatorController;
@@ -39,11 +40,18 @@ public class Player : NetworkBehaviour {
         //if an Object with the Tag "interactableO" is triggered then destroy this object(to hide it) and change the sprite
         if (other.CompareTag("interactableO"))
         {
-            Debug.Log(other.name);
-            currentInteractableObj = other.gameObject;
-            Destroy(other.gameObject);
-           	
-			gameObject.GetComponent<Animator> ().runtimeAnimatorController = animWeapon as RuntimeAnimatorController; 
+
+			if (gameObject.layer ==9) {
+				Debug.Log(other.name);
+				currentInteractableObj = other.gameObject;
+				Destroy(other.gameObject);
+				gameObject.GetComponent<Animator> ().runtimeAnimatorController = animWeapon as RuntimeAnimatorController; 
+			} else {
+				Debug.Log(other.name);
+				currentInteractableObj = other.gameObject;
+				Destroy(other.gameObject);
+				gameObject.GetComponent<Animator> ().runtimeAnimatorController = animWeapon2 as RuntimeAnimatorController; 
+			}
 
         }
     }

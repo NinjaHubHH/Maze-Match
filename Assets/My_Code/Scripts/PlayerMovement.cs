@@ -10,6 +10,8 @@ public class PlayerMovement : NetworkBehaviour {
 	private Animator animator;
 	private ParticleSystem particle; 
 
+	public RuntimeAnimatorController anim1;
+
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> (); 
@@ -73,5 +75,12 @@ public class PlayerMovement : NetworkBehaviour {
 		}
 
 
+
     }
+
+	public override void OnStartLocalPlayer()
+	{
+		GetComponent<Animator>().runtimeAnimatorController = anim1 as RuntimeAnimatorController;
+
+	}
 }

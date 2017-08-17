@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
+  anim1: {fileID: 9100000, guid: 8e7ea76cc0fcdfe4bbdef79a805fe97e, type: 2}
 --- !u!114 &114474585233699318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,7 +239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInteractableObj: {fileID: 0}
-  animWeapon: {fileID: 9100000, guid: 0bed476463114b74fb3b8dd087e949f4, type: 2}
+  animWeapon: {fileID: 9100000, guid: ce7fee9f70ce2ce429b3ad14db52d8f3, type: 2}
+  animWeapon2: {fileID: 9100000, guid: 0bed476463114b74fb3b8dd087e949f4, type: 2}
 --- !u!114 &114701274486050692
 MonoBehaviour:
   m_ObjectHideFlags: 1
