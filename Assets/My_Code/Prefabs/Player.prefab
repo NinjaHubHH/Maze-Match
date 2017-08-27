@@ -158,9 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a485722e36030419ce72d8c4d49410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 6
+  startingHealth: 100
   currentHealth: 0
-  attackDamage: 1
   HeartSprites: []
 --- !u!114 &114368093454900586
 MonoBehaviour:

@@ -10,21 +10,20 @@ public class Health : NetworkBehaviour {
     GameObject player;
     bool playerInRange;
 
-    public int startingHealth = 6;
+    public int startingHealth = 100;
     [SyncVar]
     public int currentHealth;
-
-    public int attackDamage = 1;
 
     public Sprite[] HeartSprites;
     private Image HeartUI;
 
     bool isDead;
+    float maxDistance = 15f;
 
     // Use this for initialization
     void Start () {
         currentHealth = startingHealth;
-     //   HeartUI.sprite = HeartSprites[6];
+        Debug.Log("Players current Health is " + currentHealth);
     }
 	
 	// Update is called once per frame
@@ -32,7 +31,7 @@ public class Health : NetworkBehaviour {
 
         if (playerInRange)
         {
-            Attack();
+            //Attack();
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -42,7 +41,13 @@ public class Health : NetworkBehaviour {
         if (other.gameObject.tag == "Player")
         {
             playerInRange = true;
-            Debug.Log("PlayerHealth" + " :" + currentHealth);
+            Debug.Log("Player in Range = " + playerInRange);
+            if (Input.GetButtonDown("Attack"))
+            {
+                Debug.Log("You hit the button for attack and a player is in range");
+                CmdHitPlayer(GetComponent<WeaponManager>().attackDamage);
+            }
+
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -53,39 +58,58 @@ public class Health : NetworkBehaviour {
         }
     }
 
-    //The function TakeDamage will only run on the Server
     [Command]
-    public void CmdTakeDamage(int amount)
+    void CmdHitPlayer(int amount)
     {
-        if (!isServer)
+        Debug.Log("cmdHitPlayer wurde ausgeführt vorm server check");
+        if (isServer)
         {
-            return;
-        }
+            Debug.Log("cmdHitPlayer wurde ausgeführt");
+            Vector2 vector2 = new Vector2(Vector3.forward.x, Vector3.forward.y);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, vector2, maxDistance); 
 
-        currentHealth -= amount;
-
-        Debug.Log(currentHealth);
-        HeartUI.sprite = HeartSprites[currentHealth];
-
-        //Player Death
-        if (currentHealth <= 0 && !isDead)
-        {
-            Die();
-        }
-
+                if (hit.collider != null)
+                {
+                    hit.transform.gameObject.GetComponent<Health>().currentHealth -= 11;
+                    hit.collider.GetComponent<Health>().currentHealth -= amount;    //ziehe dem vom raycast getroffenen Player Leben ab
+                    Debug.Log(transform.name + "got " + currentHealth + "health.");
+                }
+        }  
     }
 
-    void Attack()
-    {
-        if (currentHealth > 0)
-        {
-            CmdTakeDamage(attackDamage);
-        }
-    }
-    //if currenthealth = 0 the player dies 
-    void Die()
-    {
-        isDead = true;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    ////The function TakeDamage will only run on the Server
+    //[Command]
+    //public void CmdTakeDamage(int amount)
+    //{
+    //    if (!isServer)
+    //    {
+    //        return;
+    //    }
+
+    //    currentHealth -= amount;
+
+    //    Debug.Log(currentHealth);
+    //    HeartUI.sprite = HeartSprites[currentHealth];
+
+    //    //Player Death
+    //    if (currentHealth <= 0 && !isDead)
+    //    {
+    //        Die();
+    //    }
+
+    //}
+
+    //void Attack()
+    //{
+    //    if (currentHealth > 0)
+    //    {
+    //        CmdTakeDamage(attackDamage);
+    //    }
+    //}
+    ////if currenthealth = 0 the player dies 
+    //void Die()
+    //{
+    //    isDead = true;
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //}
 }
