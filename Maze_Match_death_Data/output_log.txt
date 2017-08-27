@@ -17,23 +17,19 @@ Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\M
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.137 seconds
+- Completed reload, in  0.139 seconds
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\System.dll (this message is harmless)
 desktop: 1680x1050 60Hz; virtual: 3600x1080 at -1680,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 4.000388 ms
-The referenced script on this Behaviour (Game Object 'Death') is missing!
- 
-(Filename:  Line: 1755)
-
+UnloadTime: 2.037068 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.675174 ms
+UnloadTime: 10.046295 ms
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 666.
-Total: 0.267597 ms (FindLiveObjects: 0.056592 ms CreateObjectMapping: 0.021766 ms MarkObjects: 0.173362 ms  DeleteObjects: 0.015876 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 665.
+Total: 0.494991 ms (FindLiveObjects: 0.060433 ms CreateObjectMapping: 0.054543 ms MarkObjects: 0.342114 ms  DeleteObjects: 0.037386 ms)
 
 Screen Center: x: 720y: 1280
  
@@ -52,43 +48,6 @@ Axt(Clone)
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 You hit Axt(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-You hit the button for attack 
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
-ClientDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Players current Health is 100
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Players current Health is 100
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Players current Health is 100
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Players current Health is 100
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-You hit the button for attack 
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Players current Health is 100
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Players current Health is 100
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
