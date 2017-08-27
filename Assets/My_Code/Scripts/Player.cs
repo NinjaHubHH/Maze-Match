@@ -6,20 +6,22 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 
 
-public class Player : NetworkBehaviour {
+public class Player : NetworkBehaviour
+{
 
     public GameObject currentInteractableObj = null;
     GameObject weapon;
     GameObject player;
 
-	public RuntimeAnimatorController animWeapon;
-	public RuntimeAnimatorController animWeapon2;
+    public RuntimeAnimatorController animWeapon;
+    public RuntimeAnimatorController animWeapon2;
 
 
-	//public RuntimeAnimatorController animatorController;
-	
-	// Update is called once per frame
-	void Update () {
+    //public RuntimeAnimatorController animatorController;
+
+    // Update is called once per frame
+    void Update()
+    {
 
         if (!isLocalPlayer)
         {
@@ -41,17 +43,20 @@ public class Player : NetworkBehaviour {
         if (other.CompareTag("interactableO"))
         {
 
-			if (gameObject.layer ==9) {
-				Debug.Log(other.name);
-				currentInteractableObj = other.gameObject;
-				Destroy(other.gameObject);
-				gameObject.GetComponent<Animator> ().runtimeAnimatorController = animWeapon as RuntimeAnimatorController; 
-			} else {
-				Debug.Log(other.name);
-				currentInteractableObj = other.gameObject;
-				Destroy(other.gameObject);
-				gameObject.GetComponent<Animator> ().runtimeAnimatorController = animWeapon2 as RuntimeAnimatorController; 
-			}
+            if (gameObject.layer == 9)
+            {
+                Debug.Log(other.name);
+                currentInteractableObj = other.gameObject;
+                Destroy(other.gameObject);
+                gameObject.GetComponent<Animator>().runtimeAnimatorController = animWeapon as RuntimeAnimatorController;
+            }
+            else
+            {
+                Debug.Log(other.name);
+                currentInteractableObj = other.gameObject;
+                Destroy(other.gameObject);
+                gameObject.GetComponent<Animator>().runtimeAnimatorController = animWeapon2 as RuntimeAnimatorController;
+            }
 
         }
     }

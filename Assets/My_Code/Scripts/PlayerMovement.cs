@@ -3,57 +3,79 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerMovement : NetworkBehaviour {
+public class PlayerMovement : NetworkBehaviour
+{
 
-    public float speed ;
+    public float speed;
     private Rigidbody2D player;
-	private Animator animator;
-	private ParticleSystem particle; 
+    private Animator animator;
+    private ParticleSystem particle;
+    public Vector2 actualDirection;
 
-	public RuntimeAnimatorController anim1;
+    public RuntimeAnimatorController anim1;
 
-	// Use this for initialization
-	void Start () {
-		animator = GetComponent<Animator> (); 
-		particle = GetComponentInChildren<ParticleSystem> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        particle = GetComponentInChildren<ParticleSystem>();
+    }
 
-
-		if (!isLocalPlayer)
-		{
-			return;
-		}
+    // Update is called once per frame
+    void Update()
+    {
 
 
-		// trigger animations
-		if (Input.GetKey ("s")) {
-			animator.SetBool ("playerDown", true);
-		} 
-		else { animator.SetBool ("playerDown", false);
-		}
+        if (!isLocalPlayer)
+        {
+            return;
+        }
 
-		if (Input.GetKey ("w")) {
-			animator.SetBool ("playerUp", true);
-		} 
-		else { animator.SetBool ("playerUp", false);
-		}
-		if (Input.GetKey ("a")) {
-			animator.SetBool ("playerLeft", true);
-		} 
-		else { animator.SetBool ("playerLeft", false);
-		}
 
-		if (Input.GetKey ("d")) {
-			animator.SetBool ("playerRight", true);
-		} 
-		else { animator.SetBool ("playerRight", false);
-		}
-		if (Input.GetKeyDown ("f")) {
-			animator.SetTrigger ("hitAni");
-		} 
+        // trigger animations
+        if (Input.GetKey("s"))
+        {
+            animator.SetBool("playerDown", true);
+            actualDirection = new Vector2(0, -1);
+
+        }
+        else
+        {
+            animator.SetBool("playerDown", false);
+        }
+
+        if (Input.GetKey("w"))
+        {
+            animator.SetBool("playerUp", true);
+            actualDirection = new Vector2(0, 1);
+        }
+        else
+        {
+            animator.SetBool("playerUp", false);
+        }
+        if (Input.GetKey("a"))
+        {
+            animator.SetBool("playerLeft", true);
+            actualDirection = new Vector2(-1, 0);
+        }
+        else
+        {
+            animator.SetBool("playerLeft", false);
+        }
+
+        if (Input.GetKey("d"))
+        {
+            animator.SetBool("playerRight", true);
+            actualDirection = new Vector2(1,0);
+        }
+        else
+        {
+            animator.SetBool("playerRight", false);
+        }
+        if (Input.GetKeyDown("f"))
+        {
+            animator.SetTrigger("hitAni");
+        }
 
 
 
@@ -64,23 +86,25 @@ public class PlayerMovement : NetworkBehaviour {
 
         float moveVertical = Input.GetAxis("Vertical");
 
-        player.velocity = new Vector2(moveHorizontal , moveVertical) * speed * 2;
+        player.velocity = new Vector2(moveHorizontal, moveVertical) * speed * 2;
 
-		if (player.velocity.magnitude > 1.4f) {
-		
-			particle.enableEmission = true; 
-		} 
-		else {
-			particle.enableEmission = false;
-		}
+        if (player.velocity.magnitude > 1.4f)
+        {
+
+            particle.enableEmission = true;
+        }
+        else
+        {
+            particle.enableEmission = false;
+        }
 
 
 
     }
 
-	public override void OnStartLocalPlayer()
-	{
-		GetComponent<Animator>().runtimeAnimatorController = anim1 as RuntimeAnimatorController;
+    public override void OnStartLocalPlayer()
+    {
+        GetComponent<Animator>().runtimeAnimatorController = anim1 as RuntimeAnimatorController;
 
-	}
+    }
 }

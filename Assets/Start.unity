@@ -561,6 +561,8 @@ GameObject:
   m_Component:
   - component: {fileID: 600526420}
   - component: {fileID: 600526419}
+  - component: {fileID: 600526422}
+  - component: {fileID: 600526421}
   m_Layer: 0
   m_Name: WeaponManager
   m_TagString: Untagged
@@ -597,6 +599,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600526421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600526418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &600526422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600526418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccba227aa6533ff4aa20ac2c6f59e91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Axt
+  attackDamage: 10
+  range: 100
 --- !u!1 &631300120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1263,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1366459097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.6, y: 195, z: 0}
+  m_LocalPosition: {x: 304.1, y: 195, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1317,7 +1365,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1391764685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 682, y: 195, z: 0}
+  m_LocalPosition: {x: 410.3, y: 195, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2155,7 +2203,8 @@ Prefab:
       value: 
       objectReference: {fileID: 1743024470142148, guid: 629698760ed08a0428a3cbad18207c8f,
         type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114867826826861414, guid: f65657583d0ed7f4a8f8adf77c2150a3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f65657583d0ed7f4a8f8adf77c2150a3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1757958511
