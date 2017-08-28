@@ -8,7 +8,6 @@ using UnityEngine.Networking;
 public class Health : NetworkBehaviour
 {
 
-    GameObject player;
     bool playerInRange;
 
     public int startingHealth = 100;
@@ -19,13 +18,13 @@ public class Health : NetworkBehaviour
     private Image HeartUI;
 
     bool isDead;
-    float maxDistance = 15f;
 
     // Use this for initialization
     void Start()
     {
         currentHealth = startingHealth;
         Debug.Log("Players current Health is " + currentHealth);
+
     }
 
     // Update is called once per frame
@@ -76,6 +75,8 @@ public class Health : NetworkBehaviour
     {
         Debug.Log("cmdHitPlayer wurde ausgeführt vorm server check");
         Debug.Log(amount);
+        GameObject currentWeapon = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().currentInteractableObj;
+        Debug.Log("The current Weapon is " + currentWeapon);
 
         if (isServer)
         {
@@ -85,7 +86,7 @@ public class Health : NetworkBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, vector2);
             Debug.DrawLine(transform.position, vector3);
 
-            if (hit.collider != null)
+            if (hit.collider != null) //hier muss noch eingefügt werden, dass die methode nur ausgeführt wird wenn eine waffe in der hand ist
             {
                 Health healthComponent = hit.collider.GetComponent<Health>();
                 healthComponent.currentHealth -= amount;    //ziehe dem vom raycast getroffenen Player Leben ab

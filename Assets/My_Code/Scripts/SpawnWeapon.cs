@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class SpawnWeapon : MonoBehaviour {
+public class SpawnWeapon : NetworkBehaviour
+{
 
     public GameObject[] weapons;
     private Transform[] spawnPoints;
@@ -11,7 +13,8 @@ public class SpawnWeapon : MonoBehaviour {
     private float screenCenterX;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         //get the position in the middle where the weapons are going to spawn
         screenCenterY = Screen.width;
@@ -20,18 +23,19 @@ public class SpawnWeapon : MonoBehaviour {
 
 
         //fill the array of spawnPoints
-        for (int i = 0; i< 20; i++)
+        for (int i = 0; i < 20; i++)
         {
 
         }
 
         Spawn();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
 
     void Spawn()
@@ -43,7 +47,8 @@ public class SpawnWeapon : MonoBehaviour {
         //  Instantiate(weapons[Random.Range(0,weapons.Length)], new Vector3(screenCenterX, screenCenterY, 0), Quaternion.identity);
 
         //Instanstiate at the centerPoint 
-        Instantiate(weapons[Random.Range(0, weapons.Length)], new Vector3(centerPoint.x, centerPoint.y, centerPoint.z), Quaternion.identity);
+        GameObject weapon = Instantiate(weapons[Random.Range(0, weapons.Length)], new Vector3(centerPoint.x, centerPoint.y, centerPoint.z), Quaternion.identity);
+        //NetworkServer.Spawn(weapon);
     }
 
 }

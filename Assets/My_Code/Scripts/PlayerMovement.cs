@@ -11,6 +11,7 @@ public class PlayerMovement : NetworkBehaviour
     private Animator animator;
     private ParticleSystem particle;
     public Vector2 actualDirection;
+    public bool gotAWeapon;
 
     public RuntimeAnimatorController anim1;
 

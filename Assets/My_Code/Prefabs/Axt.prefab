@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61116800167976614}
   - component: {fileID: 50549670026425378}
   - component: {fileID: 114579202933747774}
+  - component: {fileID: 114829597076888668}
   m_Layer: 0
   m_Name: Axt
   m_TagString: interactableO
@@ -106,6 +107,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af53bc4f67e5bc24b988ad16eb2eacc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114829597076888668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089590072789026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 10
+    i1: 74
+    i2: 14
+    i3: 54
+    i4: 249
+    i5: 163
+    i6: 101
+    i7: 164
+    i8: 88
+    i9: 239
+    i10: 115
+    i11: 183
+    i12: 242
+    i13: 143
+    i14: 12
+    i15: 143
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &212263045485120134
 SpriteRenderer:
   m_ObjectHideFlags: 1

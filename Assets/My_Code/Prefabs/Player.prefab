@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 60
   actualDirection: {x: 0, y: 0}
+  gotAWeapon: 0
   anim1: {fileID: 9100000, guid: 8e7ea76cc0fcdfe4bbdef79a805fe97e, type: 2}
 --- !u!114 &114474585233699318
 MonoBehaviour:

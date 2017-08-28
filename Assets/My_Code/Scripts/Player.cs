@@ -8,8 +8,9 @@ using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour
 {
-
+    [SyncVar]
     public GameObject currentInteractableObj = null;
+
     GameObject weapon;
     GameObject player;
 
