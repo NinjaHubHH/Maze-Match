@@ -2,34 +2,51 @@ Initialize engine version: 5.5.4f1 (8ffd0efd98b1)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Renderer: NVIDIA GeForce GTX 980 (ID=0x13c0)
     Vendor:   NVIDIA
     VRAM:     3072 MB
-    Driver:   22.21.13.8205
+    Driver:   22.21.13.8476
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.139 seconds
-Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\System.dll (this message is harmless)
-desktop: 1680x1050 60Hz; virtual: 3600x1080 at -1680,0
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.083 seconds
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.037068 ms
+UnloadTime: 1.761645 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 10.046295 ms
+UnloadTime: 7.542342 ms
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 665.
-Total: 0.494991 ms (FindLiveObjects: 0.060433 ms CreateObjectMapping: 0.054543 ms MarkObjects: 0.342114 ms  DeleteObjects: 0.037386 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 721.
+Total: 0.532870 ms (FindLiveObjects: 0.101499 ms CreateObjectMapping: 0.027595 ms MarkObjects: 0.366348 ms  DeleteObjects: 0.036159 ms)
+
+IndexOutOfRangeException: NetworkReader:ReadByte out of range:NetBuf sz:33 pos:33
+  at UnityEngine.Networking.NetBuffer.ReadByte () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkReader.ReadByte () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkReader.ReadPackedUInt32 () [0x00000] in <filename unknown>:0 
+  at Health.OnDeserialize (UnityEngine.Networking.NetworkReader reader, Boolean initialState) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkIdentity.OnUpdateVars (UnityEngine.Networking.NetworkReader reader, Boolean initialState) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.ClientScene.ApplySpawnPayload (UnityEngine.Networking.NetworkIdentity uv, Vector3 position, System.Byte[] payload, NetworkInstanceId netId, UnityEngine.GameObject newGameObject) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.ClientScene.OnObjectSpawn (UnityEngine.Networking.NetworkMessage netMsg) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkConnection.HandleReader (UnityEngine.Networking.NetworkReader reader, Int32 receivedSize, Int32 channelId) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkConnection.HandleBytes (System.Byte[] buffer, Int32 receivedSize, Int32 channelId) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkConnection.TransportRecieve (System.Byte[] bytes, Int32 numBytes, Int32 channelId) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkClient.Update () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkClient.UpdateClients () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkIdentity.UNetStaticUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 Screen Center: x: 720y: 1280
  
@@ -51,8 +68,38 @@ You hit Axt(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
 ClientDisconnected due to error: Timeout
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 31b8 -> priority: 1 
