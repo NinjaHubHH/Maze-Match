@@ -9,6 +9,6 @@ public class WeaponManager : MonoBehaviour
 
     public string name = "Axt";
 
-    public int attackDamage = 10;
+    public int attackDamage = 1;
     public float range = 100f;
 }
