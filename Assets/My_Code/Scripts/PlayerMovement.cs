@@ -73,10 +73,12 @@ public class PlayerMovement : NetworkBehaviour
         {
             animator.SetBool("playerRight", false);
         }
-        if (Input.GetKeyDown("f"))
-        {
-            animator.SetTrigger("hitAni");
-        }
+		if (Input.GetKeyDown ("f")) {
+			animator.SetBool ("hitAni", true);
+		} 
+		else {
+			animator.SetBool("hitAni", false);
+		}
 
 
 
