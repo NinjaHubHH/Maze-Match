@@ -10,8 +10,9 @@ public class PlayerMovement : NetworkBehaviour
     private Rigidbody2D player;
     private Animator animator;
     private ParticleSystem particle;
+
+    [SyncVar]
     public Vector2 actualDirection;
-    public bool gotAWeapon;
 
     public RuntimeAnimatorController anim1;
 

@@ -31,7 +31,6 @@ public class SpawnWeapon : NetworkBehaviour
         Spawn();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
