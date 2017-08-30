@@ -17,19 +17,19 @@ Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\Unit
 Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.042 seconds
+- Completed reload, in  0.038 seconds
 Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Uni3\MazeRun\Maze-Match\Maze_Match_death_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.124420 ms
+UnloadTime: 1.036243 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.720664 ms
+UnloadTime: 4.509736 ms
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 717.
-Total: 0.383476 ms (FindLiveObjects: 0.104988 ms CreateObjectMapping: 0.042819 ms MarkObjects: 0.212513 ms  DeleteObjects: 0.022202 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 708.
+Total: 0.356833 ms (FindLiveObjects: 0.084371 ms CreateObjectMapping: 0.053287 ms MarkObjects: 0.197289 ms  DeleteObjects: 0.021251 ms)
 
 Screen Center: x: 720y: 1280
  
@@ -55,5 +55,14 @@ You hit Axt(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
+ClientDisconnected due to error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1f98 -> priority: 1 
+  Thread -> id: 2370 -> priority: 1 

@@ -11,11 +11,11 @@ public class Health : NetworkBehaviour
     bool playerInRange;
 
     public int startingHealth = 3;
-    [SyncVar]
+	[SyncVar (hook = "OnChangeHealth")]
     public int currentHealth;
 
-    //public Sprite[] HeartSprites;
-	//public Image HeartUI;
+    public Sprite[] HeartSprites;
+	public Image HeartUI;
 
     bool isDead;
 
@@ -42,10 +42,9 @@ public class Health : NetworkBehaviour
             //Attack(); old attack method
         }
 			
-
-		HealtUIManager.health = currentHealth; 
-
     }
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("You hit " + other.name);
@@ -58,6 +57,7 @@ public class Health : NetworkBehaviour
 
         }
     }
+
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -65,6 +65,7 @@ public class Health : NetworkBehaviour
             playerInRange = false;
         }
     }
+
 
     void CheckForAttack()
     {
@@ -97,6 +98,7 @@ public class Health : NetworkBehaviour
                 healthComponent.currentHealth -= amount;    //ziehe dem vom raycast getroffenen Player Leben ab
                 Debug.Log(hit.collider.name + " got " + healthComponent.currentHealth + " health.");
 
+		
 
                 //Player Death
                 if (healthComponent.currentHealth <= 0 && !isDead)
@@ -105,8 +107,15 @@ public class Health : NetworkBehaviour
                 }
             }
 
+
         }
     }
+
+
+	void OnChangeHealth (int currentHealth)
+	{
+		HeartUI.sprite = HeartSprites [currentHealth]; 
+	}
 
     void Die()
     {
