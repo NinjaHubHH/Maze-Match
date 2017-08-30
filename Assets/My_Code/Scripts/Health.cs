@@ -7,7 +7,14 @@ using UnityEngine.Networking;
 
 public class Health : NetworkBehaviour
 {
+    public const int maxHealth = 100;
+    [SyncVar]
+    public int currHealth = maxHealth;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    public Vector2 vector2;
     bool playerInRange;
 
     public const int startingHealth = 3;
@@ -26,16 +33,37 @@ public class Health : NetworkBehaviour
         currentHealth = startingHealth;
         Debug.Log("Players current Health is " + currentHealth);
 
+        vector2 = GetComponent<PlayerMovement>().actualDirection;  //holt sich die Richtung in die der Spieler guckt
+
     }
 
     void Update()
     {
+
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         if (isLocalPlayer)
         {
             CheckForAttack();
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        if (!isServer)
+        {
+            return;
+        }
+        currHealth -= damage;
+        if (currHealth <= 0)
+        {
+            currHealth = 0;
+            Debug.Log("Dead!");
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other) // Only for Testing and debugging
     {
@@ -75,12 +103,11 @@ public class Health : NetworkBehaviour
         if (isServer)
         {
             Debug.Log("cmdHitPlayer wurde ausgeführt");
-            Vector2 vector2 = GetComponent<PlayerMovement>().actualDirection;  //holt sich die Richtung in die der Spieler guckt für den Raycast
             Vector3 vector3 = new Vector3(vector2.x, vector2.y, 0); //nur für Debug drawLine
             RaycastHit2D hit = Physics2D.Raycast(transform.position, vector2);  //Raycast von der aktuellen position, in Richtung in die der Spieler guckt
             Debug.DrawLine(transform.position, vector3);
 
-            if (hit.collider != null) 
+            if (hit.collider != null)
             {
                 Health healthComponent = hit.collider.GetComponent<Health>();
                 healthComponent.currentHealth -= amount;    //ziehe dem vom raycast getroffenen Player Leben ab
