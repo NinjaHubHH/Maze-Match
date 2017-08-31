@@ -7,7 +7,7 @@ public class PlayerShot : NetworkBehaviour {
 
 
     public GameObject axtShot;
-    public Transform axtSpawn;
+    private Transform axtSpawnForShoot;
     public Vector2 vector2;
 
 
@@ -16,6 +16,8 @@ public class PlayerShot : NetworkBehaviour {
     }
 	
 	void Update () {
+
+        axtSpawnForShoot = GetComponent<PlayerMovement>().axtSpawn;
 
         if (!isLocalPlayer)
         {
@@ -34,7 +36,7 @@ public class PlayerShot : NetworkBehaviour {
         vector2 = GetComponent<PlayerMovement>().actualDirection;  //holt sich die Richtung in die der Spieler guckt
         Debug.Log("Richtung Spieler: " + vector2);
 
-        GameObject axt = Instantiate(axtShot, axtSpawn.position, axtSpawn.rotation);
+        GameObject axt = Instantiate(axtShot, axtSpawnForShoot.position, axtSpawnForShoot.rotation);
         axt.GetComponent<Rigidbody2D>().velocity = new Vector2(vector2.x, vector2.y) * 40; 
         NetworkServer.Spawn(axt);
         Destroy(axt, 6.0f);  //zerstört nach 6 sekunden das GameObject

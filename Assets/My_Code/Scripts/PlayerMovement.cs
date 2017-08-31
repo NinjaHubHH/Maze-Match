@@ -14,6 +14,10 @@ public class PlayerMovement : NetworkBehaviour
     [SyncVar]
     public Vector2 actualDirection;
 
+    //position of where the axe will be spawn. it changes the transform with the players rotation
+    [SyncVar]
+    public Transform axtSpawn;
+
     public RuntimeAnimatorController anim1;
 
     // Use this for initialization
@@ -39,6 +43,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             animator.SetBool("playerDown", true);
             actualDirection = new Vector2(0, -1);
+            axtSpawn.position = new Vector3(player.transform.position.x, player.transform.position.y - 25, 0);
 
         }
         else
@@ -50,6 +55,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             animator.SetBool("playerUp", true);
             actualDirection = new Vector2(0, 1);
+            axtSpawn.position = new Vector3(player.transform.position.x, player.transform.position.y + 25, 0);
         }
         else
         {
@@ -59,6 +65,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             animator.SetBool("playerLeft", true);
             actualDirection = new Vector2(-1, 0);
+            axtSpawn.position = new Vector3(player.transform.position.x - 20, player.transform.position.y, 0);
         }
         else
         {
@@ -69,6 +76,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             animator.SetBool("playerRight", true);
             actualDirection = new Vector2(1,0);
+            axtSpawn.position = new Vector3(player.transform.position.x + 15, player.transform.position.y, 0);
         }
         else
         {
@@ -87,7 +95,6 @@ public class PlayerMovement : NetworkBehaviour
         player = GetComponent<Rigidbody2D>();
 
         float moveHorizontal = Input.GetAxis("Horizontal");
-
         float moveVertical = Input.GetAxis("Vertical");
 
         player.velocity = new Vector2(moveHorizontal, moveVertical) * speed * 2;
