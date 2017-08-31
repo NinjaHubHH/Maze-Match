@@ -33,9 +33,7 @@ public class Health : NetworkBehaviour
         currentHealth = startingHealth;
         Debug.Log("Players current Health is " + currentHealth);
 
-        vector2 = GetComponent<PlayerMovement>().actualDirection;  //holt sich die Richtung in die der Spieler guckt
-
-    }
+     }
 
     void Update()
     {
@@ -44,11 +42,9 @@ public class Health : NetworkBehaviour
         {
             return;
         }
-
-        if (isLocalPlayer)
-        {
-            CheckForAttack();
-        }
+             
+        CheckForAttack();
+        
     }
 
     public void TakeDamage(int damage)
@@ -99,6 +95,8 @@ public class Health : NetworkBehaviour
     {
         Debug.Log("cmdHitPlayer wurde ausgeführt vorm server");
         Debug.Log("Angriffsstärke " + amount);
+
+        vector2 = GetComponent<PlayerMovement>().actualDirection;  //holt sich die Richtung in die der Spieler guckt
 
         if (isServer)
         {

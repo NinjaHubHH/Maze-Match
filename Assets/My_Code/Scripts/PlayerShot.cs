@@ -12,7 +12,7 @@ public class PlayerShot : NetworkBehaviour {
 
 
     void Start () {
-        vector2 = GetComponent<PlayerMovement>().actualDirection;  //holt sich die Richtung in die der Spieler guckt
+
     }
 	
 	void Update () {
@@ -31,8 +31,11 @@ public class PlayerShot : NetworkBehaviour {
     [Command]
     void CmdFire()
     {
+        vector2 = GetComponent<PlayerMovement>().actualDirection;  //holt sich die Richtung in die der Spieler guckt
+        Debug.Log("Richtung Spieler: " + vector2);
+
         GameObject axt = Instantiate(axtShot, axtSpawn.position, axtSpawn.rotation);
-        axt.GetComponent<Rigidbody2D>().velocity = axt.transform.right * 15; // edit here
+        axt.GetComponent<Rigidbody2D>().velocity = new Vector2(vector2.x, vector2.y) * 40; 
         NetworkServer.Spawn(axt);
         Destroy(axt, 6.0f);  //zerstört nach 6 sekunden das GameObject
     }
