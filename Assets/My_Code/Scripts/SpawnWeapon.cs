@@ -30,7 +30,7 @@ public class SpawnWeapon : NetworkBehaviour
         if (isServer)
         {
             Spawn();
-            Invoke("SpawnSecondWeapon", 5.0f); 
+            Invoke("SpawnSecondWeapon", 10.0f);
         }
 
     }
@@ -51,8 +51,8 @@ public class SpawnWeapon : NetworkBehaviour
         NetworkServer.Spawn(weapon);
     }
 
-    //Nach 5 sekunden hosten, spawne eine weitere Waffe
-     void SpawnSecondWeapon()
+    //Nach 10 sekunden hosten, spawne eine weitere Waffe
+    void SpawnSecondWeapon()
     {
         GameObject weapon2 = Instantiate(weapons[Random.Range(0, weapons.Length)], new Vector3(centerPoint.x + 5, centerPoint.y, centerPoint.z), Quaternion.identity);
         NetworkServer.Spawn(weapon2);

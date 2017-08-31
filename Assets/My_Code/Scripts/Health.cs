@@ -7,13 +7,12 @@ using UnityEngine.Networking;
 
 public class Health : NetworkBehaviour
 {
+    //die folgenden zwei variablen sind nur für den Axtwurf
     public const int maxHealth = 100;
     [SyncVar]
     public int currHealth = maxHealth;
 
-    /// <summary>
-    /// 
-    /// </summary>
+
     public Vector2 vector2;
     bool playerInRange;
 
@@ -27,13 +26,11 @@ public class Health : NetworkBehaviour
 
     bool isDead;
 
-    // Use this for initialization
     void Start()
     {
         currentHealth = startingHealth;
         Debug.Log("Players current Health is " + currentHealth);
-
-     }
+    }
 
     void Update()
     {
@@ -42,9 +39,9 @@ public class Health : NetworkBehaviour
         {
             return;
         }
-             
+
         CheckForAttack();
-        
+
     }
 
     public void TakeDamage(int damage)

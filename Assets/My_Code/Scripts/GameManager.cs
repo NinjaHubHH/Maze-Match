@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//GameManager beiinhalett ein Dictionary über die Player und deren ID um diese später abzufragen und beliebig viele Spieler mit ihren IDs abzuspeichern
+//GameManager beinhaltet ein Dictionary über die Player und deren ID um diese später abzufragen und beliebig viele Spieler mit ihren IDs abzuspeichern
 public class GameManager : MonoBehaviour {
 
     private const string PLAYER_ID_PREFIX = "Player "; //prefix damit die Player auch "Player 1" heißen und nicht nur "1"

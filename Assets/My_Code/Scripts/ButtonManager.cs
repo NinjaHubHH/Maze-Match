@@ -9,7 +9,7 @@ public class ButtonManager : MonoBehaviour {
 
     void Start()
     {
-        HideCanvasImage();
+        HideCanvasImage(); 
     }
 
     public void StartGameBtn(string gameLevel)

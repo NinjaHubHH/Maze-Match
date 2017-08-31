@@ -38,6 +38,7 @@ public class Player : NetworkBehaviour
 
     }
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
         //if an Object with the Tag "interactableO" is triggered then destroy this object(to hide it) and change the sprite

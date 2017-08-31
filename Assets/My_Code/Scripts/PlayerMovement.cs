@@ -37,7 +37,31 @@ public class PlayerMovement : NetworkBehaviour
             return;
         }
 
+        //Player Movement 
+        player = GetComponent<Rigidbody2D>();
 
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        player.velocity = new Vector2(moveHorizontal, moveVertical) * speed * 2;
+
+        if (player.velocity.magnitude > 1.4f)
+        {
+
+            particle.enableEmission = true;
+        }
+        else
+        {
+            particle.enableEmission = false;
+        }
+
+        TriggerAnimations();
+
+    }
+
+
+    void TriggerAnimations()
+    {
         // trigger animations
         if (Input.GetKey("s"))
         {
@@ -75,42 +99,21 @@ public class PlayerMovement : NetworkBehaviour
         if (Input.GetKey("d"))
         {
             animator.SetBool("playerRight", true);
-            actualDirection = new Vector2(1,0);
+            actualDirection = new Vector2(1, 0);
             axtSpawn.position = new Vector3(player.transform.position.x + 15, player.transform.position.y, 0);
         }
         else
         {
             animator.SetBool("playerRight", false);
         }
-		if (Input.GetKeyDown ("f")) {
-			animator.SetBool ("hitAni", true);
-		} 
-		else {
-			animator.SetBool("hitAni", false);
-		}
-
-
-
-        //Player Movement 
-        player = GetComponent<Rigidbody2D>();
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        player.velocity = new Vector2(moveHorizontal, moveVertical) * speed * 2;
-
-        if (player.velocity.magnitude > 1.4f)
+        if (Input.GetKeyDown("f"))
         {
-
-            particle.enableEmission = true;
+            animator.SetBool("hitAni", true);
         }
         else
         {
-            particle.enableEmission = false;
+            animator.SetBool("hitAni", false);
         }
-
-
-
     }
 
     public override void OnStartLocalPlayer()

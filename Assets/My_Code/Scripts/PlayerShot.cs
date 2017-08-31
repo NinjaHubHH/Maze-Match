@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerShot : NetworkBehaviour {
-
-
+public class PlayerShot : NetworkBehaviour
+{
     public GameObject axtShot;
-    private Transform axtSpawnForShoot;
-    public Vector2 vector2;
+    private Transform axtSpawnForShoot; //get the actual transform position of the weapon spawning point
+    private Vector2 vector2;
 
 
-    void Start () {
+    void Start()
+    {
 
     }
-	
-	void Update () {
+
+    void Update()
+    {
 
         axtSpawnForShoot = GetComponent<PlayerMovement>().axtSpawn;
 
@@ -37,7 +38,7 @@ public class PlayerShot : NetworkBehaviour {
         Debug.Log("Richtung Spieler: " + vector2);
 
         GameObject axt = Instantiate(axtShot, axtSpawnForShoot.position, axtSpawnForShoot.rotation);
-        axt.GetComponent<Rigidbody2D>().velocity = new Vector2(vector2.x, vector2.y) * 40; 
+        axt.GetComponent<Rigidbody2D>().velocity = new Vector2(vector2.x, vector2.y) * 40;
         NetworkServer.Spawn(axt);
         Destroy(axt, 6.0f);  //zerstört nach 6 sekunden das GameObject
     }
