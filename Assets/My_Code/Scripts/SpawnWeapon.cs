@@ -30,7 +30,7 @@ public class SpawnWeapon : NetworkBehaviour
         if (isServer)
         {
             Spawn();
-            Invoke("SpawnSecondWeapon", 10.0f);
+            Invoke("SpawnSecondWeapon", 12.0f);
         }
 
     }
