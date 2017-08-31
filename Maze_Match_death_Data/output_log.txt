@@ -17,21 +17,81 @@ Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\M
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.487 seconds
+- Completed reload, in  0.015 seconds
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Uni HAW\7. Semester\IMP\Maze-Match\Maze_Match_death_Data\Managed\System.dll (this message is harmless)
 desktop: 1680x1050 60Hz; virtual: 3600x1080 at -1680,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 29.298008 ms
+UnloadTime: 1.790217 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.046263 ms
+UnloadTime: 3.237295 ms
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 724.
-Total: 1.862942 ms (FindLiveObjects: 0.035082 ms CreateObjectMapping: 0.020998 ms MarkObjects: 0.778978 ms  DeleteObjects: 1.026859 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 725.
+Total: 0.250184 ms (FindLiveObjects: 0.038411 ms CreateObjectMapping: 0.020742 ms MarkObjects: 0.170801 ms  DeleteObjects: 0.019973 ms)
 
-Screen Center: x: 720y: 1280
+Players current Health is 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Players current Health is 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Axt(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit Axt(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Health.CheckForAttack () [0x00000] in <filename unknown>:0 
+  at Health.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Health.CheckForAttack () [0x00000] in <filename unknown>:0 
+  at Health.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Health.CheckForAttack () [0x00000] in <filename unknown>:0 
+  at Health.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+You hit the button for attack 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Health.CheckForAttack () [0x00000] in <filename unknown>:0 
+  at Health.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Players current Health is 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Players current Health is 3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -43,11 +103,14 @@ Players current Health is 3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
-ClientDisconnected due to error: Timeout
+Axt(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+You hit Axt(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 469c -> priority: 1 
-  Thread -> id: 46a0 -> priority: 1 
+  Thread -> id: 17e8 -> priority: 1 
+  Thread -> id: 45e0 -> priority: 1 

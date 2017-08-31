@@ -21,14 +21,18 @@ public class SpawnWeapon : NetworkBehaviour
         screenCenterX = Screen.height;
         Debug.Log("Screen Center: " + "x: " + screenCenterX + "y: " + screenCenterY);
 
-
         //fill the array of spawnPoints
         for (int i = 0; i < 20; i++)
         {
 
         }
 
-        Spawn();
+        if (isServer)
+        {
+            Spawn();
+            Invoke("SpawnSecondWeapon", 5.0f); 
+        }
+
     }
 
     void Update()
@@ -42,12 +46,16 @@ public class SpawnWeapon : NetworkBehaviour
         //random index for a weapon of the weaponArray
         // int index = Random.Range(0, spawnPoints.Length);
 
-        //Instanstiate for the center of the screen - does not work like it should
-        //  Instantiate(weapons[Random.Range(0,weapons.Length)], new Vector3(screenCenterX, screenCenterY, 0), Quaternion.identity);
-
         //Instanstiate at the centerPoint 
         GameObject weapon = Instantiate(weapons[Random.Range(0, weapons.Length)], new Vector3(centerPoint.x, centerPoint.y, centerPoint.z), Quaternion.identity);
-        //NetworkServer.Spawn(weapon);
+        NetworkServer.Spawn(weapon);
+    }
+
+    //Nach 5 sekunden hosten, spawne eine weitere Waffe
+     void SpawnSecondWeapon()
+    {
+        GameObject weapon2 = Instantiate(weapons[Random.Range(0, weapons.Length)], new Vector3(centerPoint.x + 5, centerPoint.y, centerPoint.z), Quaternion.identity);
+        NetworkServer.Spawn(weapon2);
     }
 
 }
